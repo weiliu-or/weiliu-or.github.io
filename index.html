@@ -1,83 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Wei Liu | Operations Research | USTC</title>
-    <style>
-        body {
-            font-family: Arial;
-            max-width: 900px;
-            margin: auto;
-            line-height: 1.6;
-        }
-        h1 { margin-bottom: 5px; }
-        h2 { border-bottom: 1px solid #ccc; padding-bottom: 5px; }
-    </style>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wei Liu | Operations Research | USTC</title>
+  <style>
+    :root {
+      --primary: #0f4c81;
+      --accent: #1f78b4;
+      --text: #222;
+      --muted: #666;
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --border: #d9e2ec;
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    .navbar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .nav-links a {
+      margin-left: 18px;
+      font-size: 0.98rem;
+    }
+
+    .hero {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-top: 28px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 12px;
+      display: block;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 2.2rem;
+      color: var(--primary);
+    }
+
+    .hero .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--primary);
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--primary);
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 30px;
+      margin-top: 24px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section h3 {
+      color: #2d3e50;
+      margin-top: 22px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin-top: 8px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding: 30px 0 10px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero img {
+        margin: 0 auto;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links a {
+        margin: 0 14px 0 0;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
 <body>
 
-<h1>Wei Liu</h1>
-<p>
-Assistant Professor (Tenure-track)<br>
-School of Management, USTC
-</p>
+  <div class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Wei Liu</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
 
-<p>
-Email: liuweimsor@gmail.com<br>
-<a href="https://www.linkedin.com/in/wei-liu-or/">LinkedIn</a>
-</p>
+  <div class="container">
 
-<hr>
+    <section class="hero">
+      <div>
+        <img src="profile.jpg" alt="Wei Liu">
+      </div>
+      <div>
+        <h1>Wei Liu</h1>
+        <div class="subtitle">
+          Tenure-Track Assistant Professor<br>
+          Faculty of Business in Scitech, School of Management<br>
+          University of Science and Technology of China
+        </div>
 
-<h2>About</h2>
-<p>
-I am Wei Liu, a tenure-track assistant professor at the School of Management, University of Science and Technology of China (USTC).
-I received my PhD from UNC Chapel Hill under the supervision of Prof. Vinayak Deshpande and Prof. Vidyadhar Kulkarni.
-I was a postdoctoral fellow at Purdue University.
-</p>
+        <p>
+          I am Wei Liu. I am currently a tenure-track assistant professor in the Faculty of Business in Scitech, School of Management, University of Science and Technology of China (USTC). Previously, I received my PhD in the Department of Statistics and Operations Research at the University of North Carolina at Chapel Hill under the supervision of Professors Vinayak Deshpande and Vidyadhar Kulkarni. After graduation, I worked as a Ross-Lynn Postdoctoral Fellow in Supply Chain and Operations Management at the Mitchell E. Daniels, Jr. School of Business at Purdue University.
+        </p>
 
-<p>
-My research focuses on data-driven resource allocation in real-world operations, including airline, healthcare, and service systems,
-using optimization, queueing theory, and stochastic modeling.
-</p>
+        <div class="hero-buttons">
+          <a class="btn" href="Wei_Liu_CV.pdf" target="_blank">Download CV</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/wei-liu-or/" target="_blank">LinkedIn</a>
+          <a class="btn secondary" href="mailto:liuweimsor@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
 
-<h2>Research</h2>
+    <section class="section" id="about">
+      <h2>About</h2>
+      <p>
+        My research focuses on data-driven resource allocation in real-world operations, including airline, healthcare, and service operations. I study how to enhance network resilience and service level using data-driven approaches, optimization, queueing theory, and stochastic modeling.
+      </p>
+    </section>
 
-<h3>Working Papers</h3>
-<ul>
-<li>Data-Driven Aircraft Assignment to Minimize Delay Propagation (R&R, Management Science)</li>
-<li>Joint Admission and Service Rate Control of an Unobservable Queue (Major Revision, POM)</li>
-<li>Dynamic Redeployment of Nurses Across Hospitals (Major Revision, MSOM)</li>
-<li>Driver Decision Model for On-Demand Delivery Platforms (Under Review, MS)</li>
-</ul>
+    <section class="section" id="research">
+      <h2>Research</h2>
 
-<h3>Publications</h3>
-<ul>
-<li>Patient Assignment and Prioritization (WSC 2024)</li>
-<li>Admission Control in Multi-server Systems (POM, 2024)</li>
-<li>Opaque Distribution Channels (IJPE, 2019)</li>
-<li>Opaque Sales Channels (IJPR, 2018)</li>
-</ul>
+      <h3>Working Papers</h3>
+      <ul>
+        <li><strong>Data-Driven Aircraft Assignment to Minimize Delay Propagation</strong>, with Vinayak Deshpande and Vidyadhar Kulkarni. R&amp;R at <em>Management Science</em>, 2026.</li>
+        <li><strong>Joint Admission and Service Rate Control of an Unobservable Queue</strong>, with Vidyadhar Kulkarni. Major Revision at <em>Production and Operations Management</em>, 2026.</li>
+        <li><strong>Dynamic Redeployment of Nurses Across Hospitals: A Sample Robust Optimization Approach</strong>, with Tianchun Li, Mengshi Lu, and Pengyi Shi. Major Revision at <em>Manufacturing &amp; Service Operations Management</em>, 2026.</li>
+        <li><strong>A Rational Decision Model for the Drivers of On-Demand Food Delivery Platforms</strong>, with Vidyadhar Kulkarni. Under Review at <em>Management Science</em>, 2026.</li>
+        <li><strong>Fairness-Constrained Workload Nurse-Patient Assignment: Incorporating Heterogeneous Patient Needs</strong>, with Mengshi Lu and Pengyi Shi. Work in Progress, 2026.</li>
+      </ul>
 
-<h2>Teaching</h2>
+      <h3>Publications</h3>
+      <ul>
+        <li>Liu, Wei, Mengshi Lu, and Pengyi Shi (2024, December). <strong>Patient Assignment and Prioritization for Multi-Stage Care with Reentrance</strong>. In <em>2024 Winter Simulation Conference (WSC)</em> (pp. 940-951). IEEE.</li>
+        <li>Liu, Wei, and Vidyadhar G. Kulkarni (2024). <strong>Admission Control in Multi-server Systems Under Binary Reward Structure</strong>. <em>Production and Operations Management</em>, 33(7), 1457-1474.</li>
+        <li>Mao, Zhaofang, Wei Liu, and Bo Feng (2019). <strong>Opaque distribution channels for service providers with asymmetric capacities: Posted-price mechanisms</strong>. <em>International Journal of Production Economics</em>, 215, 112-120.</li>
+        <li>Feng, Bo, Wei Liu, and Zhaofang Mao (2018). <strong>Use of opaque sales channels in addition to traditional channels by service providers</strong>. <em>International Journal of Production Research</em>, 56(10), 3369-3383.</li>
+      </ul>
+    </section>
 
-<p>
-My teaching philosophy is to inspire students for self-study and connect theory with real-world applications.
-</p>
+    <section class="section" id="teaching">
+      <h2>Teaching</h2>
 
-<ul>
-<li>Operations Management (2024)</li>
-<li>Data Models & Inference (2019–2020)</li>
-<li>Decision Models (2020)</li>
-</ul>
+      <h3>Teaching Philosophy</h3>
+      <p>
+        My primary goal as a teacher is to inspire my students for self-study. I do this through thoughtful preparation of course content and engaging delivery, by thinking from the students’ perspective, and by connecting abstract concepts to tangible applications and demonstrations. I believe it is very important to maintain a positive but challenging classroom environment to foster student confidence and encourage active participation. I also believe that homework and student feedback are important for consolidating materials and improving the learning experience.
+      </p>
 
-<h2>Contact</h2>
-<p>
-Department of Management Science<br>
-School of Management<br>
-University of Science and Technology of China<br>
-Email: liuweimsor@gmail.com
-</p>
+      <h3>Instructor</h3>
+      <ul>
+        <li>Operations Management, Spring 2024</li>
+        <li>Introduction to Data Models &amp; Inference, Fall 2019; Spring 2020; Summer I &amp; II 2020; Fall 2020</li>
+        <li>Decision Models for Business and Economics, Summer I 2020</li>
+      </ul>
 
+      <h3>Graduate Teaching Assistant</h3>
+      <ul>
+        <li>Introduction to Data Models &amp; Inference, 2019, 2021</li>
+        <li>Introduction to Management Science, 2018, 2021</li>
+        <li>Advanced Optimization (graduate level), 2019</li>
+        <li>Introduction to Modeling and Analysis of Stochastic Systems, 2018</li>
+        <li>Discrete Mathematics and Its Applications, 2017, 2018</li>
+      </ul>
+
+      <h3>Mentoring Experience</h3>
+      <ul>
+        <li>Mentor for Comprehensive Written Exams (qualified exam for first year PhD students), Summer 2019</li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <p>
+            <strong>Department of Management Science</strong><br>
+            School of Management<br>
+            University of Science and Technology of China<br>
+            Hefei, China
+          </p>
+        </div>
+        <div>
+          <p>
+            <strong>Email:</strong> <a href="mailto:liuweimsor@gmail.com">liuweimsor@gmail.com</a><br>
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/wei-liu-or/" target="_blank">www.linkedin.com/in/wei-liu-or/</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © 2026 Wei Liu. Last updated March 2026.
+    </div>
+
+  </div>
 </body>
 </html>
